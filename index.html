@@ -7,19 +7,19 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212; /* Fundo geral dark */
+            background-color: #121212;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 40px 20px;
-            color: #e0e0e0; /* Texto claro padrão */
+            color: #e0e0e0;
         }
 
         table {
             border-collapse: collapse;
             width: 100%;
             max-width: 1200px;
-            background-color: #1e1e1e; /* Fundo da tabela dark */
+            background-color: #1e1e1e;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             border-radius: 8px;
             overflow: hidden;
@@ -29,24 +29,24 @@
         th, td {
             padding: 12px 15px;
             text-align: center;
-            border-bottom: 1px solid #333; /* Linhas divisórias sutis */
+            border-bottom: 1px solid #333;
         }
 
         th {
-            background-color: #1a252f; /* Topo da tabela escuro */
+            background-color: #1a252f;
             color: #ffffff;
             text-transform: uppercase;
             font-size: 0.85rem;
             letter-spacing: 1px;
         }
-
-        tr:hover {
-            background-color: #252525; /* Efeito hover no dark mode */
+        /* Aplica o hover apenas nas linhas que NÃO são a de destaque */
+        tr:not(.destaque):hover {
+            background-color: #252525;
         }
 
         .plano-nome {
             font-weight: bold;
-            color: #5dade2; /* Azul ligeiramente mais claro para contraste */
+            color: #5dade2;
             text-align: left;
         }
 
@@ -57,7 +57,7 @@
 
         .valor-principal {
             font-weight: bold;
-            color: #2ecc71; /* Verde vivo */
+            color: #2ecc71;
         }
 
         .conversao {
@@ -66,7 +66,7 @@
         }
 
         .destaque {
-            background-color: #1b3a4b; /* Destaque azul escuro para o Intermediário 1 */
+            background-color: #1b3a4b; /* Mantém essa cor fixa */
         }
 
         .info-container {
@@ -79,7 +79,7 @@
         }
 
         .info-card {
-            background: #1e1e1e; /* Cards escuros */
+            background: #1e1e1e;
             padding: 20px;
             border-left: 5px solid #2980b9;
             border-radius: 4px;
@@ -103,14 +103,13 @@
             }
 
         .alerta {
-            border-left-color: #e67e22; /* Laranja técnico */
+            border-left-color: #e67e22;
         }
 
         .suporte {
-            border-left-color: #27ae60; /* Verde técnico */
+            border-left-color: #27ae60;
         }
 
-        /* Responsividade para celulares */
         @media (max-width: 768px) {
             .info-container {
                 grid-template-columns: 1fr;
